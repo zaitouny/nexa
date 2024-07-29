@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Nexa</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/n.logo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/nexa3.png" alt="Nexa Logo">
+        <!-- <h1 class="sitename">Nexa</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about" class="active">About</a></li>
+          <li><a href="#services" class="active">Services</a></li>
+          <li><a href="#team" class="active">Team</a></li>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#about">Get Started</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+            <h1>Tailored Digital Solutions for Your Business</h1>
+            <p>At Nexa, we create personalized digital solutions to elevate your business. Whether it's a responsive
+              website, a mobile app, or custom software, our talented team brings your vision to life.</p>
+            <div class="d-flex">
+              <a href="#about" class="btn-get-started">Get Started</a>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
+            <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section light-background">
+
+      <div class="container" data-aos="zoom-in">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 5,
+                  "spaceBetween": 120
+                },
+                "1200": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/laravel-svgrepo-com (1).svg" class="img-fluid"
+                alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/php-svgrepo-com.svg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/nodejs-1-logo-svgrepo-com.svg" class="img-fluid"
+                alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/express-svgrepo-com.svg" class="img-fluid" alt="">
+            </div>
+            <div class="swiper-slide"><img src="assets/img/clients/flutter-svgrepo-com.svg" class="img-fluid" alt="">
+            </div>
+            <div class="swiper-slide"><img src="assets/img/clients/dart-svgrepo-com.svg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/swift-svgrepo-com.svg" class="img-fluid" alt="">
+            </div>
+            <div class="swiper-slide"><img src="assets/img/clients/html-5-svgrepo-com.svg" class="img-fluid" alt="">
+            </div>
+            <div class="swiper-slide"><img src="assets/img/clients/javascript-svgrepo-com.svg" class="img-fluid" alt="">
+            </div>
+            <div class="swiper-slide"><img
+                src="assets/img/clients/react-javascript-js-framework-facebook-svgrepo-com.svg" class="img-fluid"
+                alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/css-3-svgrepo-com.svg" class="img-fluid" alt="">
+            </div>
+            <div class="swiper-slide"><img src="assets/img/clients/bootstrap-svgrepo-com.svg" class="img-fluid" alt="">
+            </div>
+            <div class="swiper-slide"><img src="assets/img/clients/tailwindcss-svgrepo-com.svg" class="img-fluid"
+                alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/mongodb-svgrepo-com.svg" class="img-fluid" alt="">
+            </div>
+            <div class="swiper-slide"><img src="assets/img/clients/mysql-logo-svgrepo-com.svg" class="img-fluid" alt="">
+            </div>
+            <div class="swiper-slide"><img src="assets/img/clients/app-store-svgrepo-com.svg" class="img-fluid" alt="">
+            </div>
+            <div class="swiper-slide"><img src="assets/img/clients/google-play-svgrepo-com.svg" class="img-fluid"
+                alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/api-interface-svgrepo-com.svg" class="img-fluid"
+                alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/web-svgrepo-com.svg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/git-svgrepo-com.svg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/github-142-svgrepo-com.svg" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Clients Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About Us</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <p>
+              We are a team of skilled developers offering web, mobile app, desktop applications, and various
+              programming services. At Nexa, we transform ideas into successful digital products.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-circle"></i> <span>Custom web development</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Mobile app creation</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Desktop application development</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Innovative programming solutions</span></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <p>We prioritize quality and client satisfaction in every project. Leveraging the latest technologies, we
+              deliver efficient and scalable solutions. Our collaborative approach ensures your vision is realized.
+              Choose Nexa for excellence in digital innovation.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="section why-us light-background" data-builder="section">
+
+      <div class="container-fluid">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
+
+            <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
+              <h3><strong>Why us?</strong></h3>
+            </div>
+            <br />
+
+            <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="faq-item faq-active">
+
+                <h3><span>01</span>Why should you trust Nexa with your digital projects?</h3>
+                <div class="faq-content">
+                  <p>Our team of experienced developers delivers high-quality, customized solutions tailored to your
+                    specific needs.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span>02</span> What sets Nexa apart from other development teams?</h3>
+                <div class="faq-content">
+                  <p>We combine innovation with precision, ensuring each project is efficient, scalable, and meets the
+                    latest industry standards.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span>03</span> How does Nexa ensure client satisfaction?</h3>
+                <div class="faq-content">
+                  <p>We prioritize open communication and collaboration, working closely with you to bring your vision
+                    to life.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span>04</span> Why is Nexa the right choice for your business?</h3>
+                <div class="faq-content">
+                  <p> Our commitment to excellence and our diverse expertise in web, mobile, and desktop applications
+                    make us a reliable partner for your digital transformation.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 order-1 order-lg-2 why-us-img">
+            <img src="assets/img/why-us.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-globe icon"></i></div>
+              <h4><a class="stretched-link">Full Stack Website Development</a></h4>
+              <p>We create comprehensive web solutions, offering both front-end and back-end development. Our full stack
+                development services ensure your website is dynamic, responsive, and fully functional, tailored to meet
+                your business needs.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-laptop icon"></i></div>
+              <h4><a class="stretched-link">Front-end Development</a></h4>
+              <p>Our team specializes in crafting visually stunning and user-friendly interfaces. We ensure your website
+                delivers an intuitive and seamless user experience, with responsive designs and interactive elements
+                that bring your vision to life.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-server icon"></i></div>
+              <h4><a class="stretched-link">Back-end Development</a></h4>
+              <p>We provide robust back-end development services to support your website's functionality and
+                scalability. Our expertise includes database management, server-side scripting, and API integration,
+                ensuring your website performs flawlessly.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-phone icon"></i></div>
+              <h4><a href="" class="stretched-link">Mobile App Development (Android & iOS)</a></h4>
+              <p>We develop high-quality mobile applications for both Android and iOS platforms. Our apps are
+                user-friendly, feature-rich, and designed to provide an excellent user experience, helping your business
+                reach customers on their preferred devices.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-cloud-upload icon"></i></div>
+              <h4><a class="stretched-link">Hosting and Deployment Services</a></h4>
+              <p>We offer reliable hosting services and assist in deploying your applications to major online stores
+                like Google Play and the Apple App Store. Our solutions ensure your website and apps are always
+                accessible, secure, and performing at their best.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-tools icon"></i></div>
+              <h4><a class="stretched-link">Programming Problem-Solving Services</a></h4>
+              <p>Our expert developers provide dedicated support to solve programming issues efficiently. Whether you
+                need bug fixes, performance optimization, or new features, we tackle any challenge to ensure your
+                software runs smoothly.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+      </div>
+
+
+    </section><!-- /Services Section -->
+
+    <!-- Team Section -->
+    <section id="team" class="team section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Team</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/photo_2024-07-29_17-25-32.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Eng. Malik Madani</h4>
+                <span>Back End and Desktop Applications Developer
+                </span>
+                <p>Expert in server-side development and desktop application creation, providing comprehensive solutions
+                  for both web backend and desktop software
+                </p>
+                <div class="social">
+                  <a href="https://www.facebook.com/malik.almdne?mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/malik_madani?igsh=ZGUzMzM3NWJiOQ=="><i
+                      class="bi bi-instagram"></i></a>
+                  <a> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/anas11.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Eng. Anas Kilani</h4>
+                <span>Full Stack Web Developer</span>
+                <p>Responsible for both front-end and back-end development, ensuring seamless integration and
+                  functionality across the entire web application
+                </p>
+                <div class="social">
+                  <a href="https://www.facebook.com/anas.kilane.5?mibextid=LQQJ4d"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/as._ki?igsh=dTBnaThwOTIycmc4&utm_source=qr"><i
+                      class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/anas-kilane-a53156226/"> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/ali.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Eng. Ali Zaitouny</h4>
+                <span>Back End Developer</span>
+                <p>Specializes in server-side development, focusing on database management, API integration, and server
+                  logic to ensure robust backend operations
+                </p>
+                <div class="social">
+                  <a href="https://www.facebook.com/AliZaitouny?mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/al_zaitouny?igsh=NTc4MTIwNjQ2YQ=="><i
+                      class="bi bi-instagram"></i></a>
+                  <a> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/adnan.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Eng. Adnan kefri</h4>
+                <span>Mobile Applications Developer</span>
+                <p>Develops cutting-edge mobile applications, delivering user-friendly and efficient solutions for
+                  various mobile platforms
+                </p>
+                <div class="social">
+                  <a href="https://www.facebook.com/profile.php?id=100005010798916&mibextid=LQQJ4d"><i
+                      class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/3dnan__k?igsh=MTk2M2M5OXVpbnkwag%3D%3D&utm_source=qr"><i
+                      class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/adnan-kafri-75021131b/"> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
+
+
+    <!-- Faq 2 Section -->
+    <section id="faq-2" class="faq-2 section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
+        <p>Welcome to our FAQ section! Here, we address some of the most common questions our clients have about our
+          services and processes. If you have any additional questions, feel free to contact us.
+        </p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>What are the steps involved in creating a website with Nexa?</h3>
+                <div class="faq-content">
+                  <p>Creating a website with Nexa involves consultation, planning, design, development, testing,
+                    deployment, and ongoing maintenance.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Why is it important to have a website for your business?</h3>
+                <div class="faq-content">
+                  <p>A website enhances online presence, showcases products, improves customer engagement, builds
+                    credibility, and supports online marketing efforts.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>How does Nexa ensure the security of my website?</h3>
+                <div class="faq-content">
+                  <p>We ensure security through regular audits, secure coding, data encryption, firewalls, software
+                    updates, and secure hosting.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Can Nexa help with the SEO optimization of my website?</h3>
+                <div class="faq-content">
+                  <p>Yes, we offer keyword research, on-page optimization, technical SEO, link building, and continuous
+                    monitoring to improve your search engine ranking.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>What technologies does Nexa use for web development?</h3>
+                <div class="faq-content">
+                  <p>We use modern technologies like Laravel, PHP, Node.js, Express.js, JavaScript, HTML, CSS,
+                    Bootstrap, Tailwind CSS, SQL, MySQL, SQL Server, MongoDB, Flutter, Dart, Swift, APIs, Git, GitHub,
+                    and provide deployment services on app stores and hosting platforms.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq 2 Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>If you have any questions or need further assistance, please don't hesitate to contact us. We are here to
+          help!</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-5">
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>Syria, Hama, Shariaa, Sahet Alnajareen</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>+963 964594375</p>
+                  <p>+963 993329401</p>
+                  <p>+963 993209002</p>
+                  <p>+963 952749458</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>support@devnexa.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1153.7506260367716!2d36.76735671895168!3d35.12421571237072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDA3JzI0LjIiTiAzNsKwNDYnMDUuOCJF!5e0!3m2!1sen!2sch!4v1722273244122!5m2!1sen!2sch"
+                frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form class="php-email-form" id="contact-form">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <label for="name" class="pb-2">Your Name</label>
+                  <input type="text" name="name" id="name" class="form-control" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject" class="pb-2">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject" required>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message" class="pb-2">Message</label>
+                  <textarea class="form-control" name="message" rows="10" id="message" required></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <button type="submit">Send Message</button>
+                </div>
+              </div>
+            </form>
+
+            <script type="text/javascript"
+              src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+            <script type="text/javascript">
+              (function () {
+                emailjs.init({
+                  publicKey: "HKzOLz9Zq_MgRs9b7"
+                });
+              })();
+
+              document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const subject = document.getElementById('subject').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                // Regular expression for basic email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                // Validate name
+                if (name === "") {
+                  alert("Name is required.");
+                  return;
+                }
+
+                // Validate email
+                if (email === "") {
+                  alert("Email is required.");
+                  return;
+                } else if (!emailRegex.test(email)) {
+                  alert("Please enter a valid email address.");
+                  return;
+                }
+
+                // Validate subject
+                if (subject === "") {
+                  alert("Subject is required.");
+                  return;
+                }
+
+                // Validate message
+                if (message === "") {
+                  alert("Message is required.");
+                  return;
+                }
+
+                // If all validations pass, create params object
+                let params = {
+                  name,
+                  email,
+                  subject,
+                  message,
+                };
+
+                emailjs.send("service_yw3dofj", "template_bdcv3ji", params)
+                  .then(function (response) {
+                    alert('Your message was sent successfully!');
+                    document.getElementById('name').value = "";
+                    document.getElementById('email').value = "";
+                    document.getElementById('subject').value = "";
+                    document.getElementById('message').value = "";
+                  }, function (error) {
+                    alert('Failed to send your message. Please try again later.');
+                  });
+              });
+            </script>
+          </div><!-- End Contact Form -->
+        </div>
+      </div>
+    </section><!-- /Contact Section -->
+
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">Nexa</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Syria, Hama
+            </p>
+            <p>Shariaa, Sahet Alnajareen</p>
+            <p>+963 964594375 | +963 993329401</p>
+            <p>+963 993209002 | +963 952749458</p>
+            <p><strong>Email:</strong> <span>support@devnexa.com
+
+              </span></p>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+          <p>Stay connected and up-to-date with our latest news, updates, and more by following us on social media!
+          </p>
+          <div class="social-links d-flex">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
