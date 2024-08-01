@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 
 <head>
   <meta charset="utf-8">
@@ -41,47 +41,42 @@
         <img src="assets/img/nexa3.png" alt="Nexa Logo">
         <!-- <h1 class="sitename">Nexa</h1> -->
       </a>
-
+  
       <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about" class="active">About</a></li>
-          <li><a href="#services" class="active">Services</a></li>
-          <li><a href="#team" class="active">Team</a></li>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        <ul class="d-flex align-items-center">
+          <li><a href="#hero" class="active">الصفحة الرئيسية</a></li>
+          <li><a href="#about">حولنا</a></li>
+          <li><a href="#services">الخدمات</a></li>
+          <li><a href="#team">فريق العمل</a></li>
+        </ul>
       </nav>
-
-      <a class="btn-getstarted" href="#about">Get Started</a>
-
+  
+      <a class="btn-getstarted" href="#about">ابدأ</a>
+  
       <div class="language-switcher">
         <div class="current-language" onclick="toggleDropdown()">
-          <span class="current-language-icon" id="current-lang-icon">En</span> <!-- أيقونة اللغة الحالية -->
+          <span class="current-language-icon" id="current-lang-icon">Ar</span> <!-- أيقونة اللغة الحالية -->
         </div>
         <ul class="languages-dropdown">
           <li class="language-item">
             <a href="javascript:void(0);" class="language-link" title="English" onclick="setLanguage('en')">
-              <span class="language-icon">En</span>
+              <span class="language-icon">En</span> 
             </a>
           </li>
           <li class="language-item">
             <a href="javascript:void(0);" class="language-link" title="Arabic" onclick="setLanguage('ar')">
-              <span class="language-icon">Ar</span>
+              <span class="language-icon">Ar</span> 
             </a>
           </li>
         </ul>
       </div>
   
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-
-      
-
+  
     </div>
   </header>
-
   
   <style>
-    
-  
     .navmenu ul {
       list-style-type: none;
       margin: 0;
@@ -180,7 +175,7 @@
   <script>
     function setLanguage(language) {
       localStorage.setItem('preferredLanguage', language);
-      window.location.href = language === 'en' ? 'index.html' : 'ar_index.html';
+      window.location.href = language === 'ar' ? 'ar_index.html' : 'index.html';
     }
   
     function toggleDropdown() {
@@ -214,16 +209,15 @@
   <main class="main">
 
     <!-- hero Section -->
-    <section id="hero" class="hero section dark-background">
+    <section id="hero" class="hero section dark-background" dir="rtl">
 
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
-            <h1>Tailored Digital Solutions for Your Business</h1>
-            <p>At Nexa, we create personalized digital solutions to elevate your business. Whether it's a responsive
-              website, a mobile app, or custom software, our talented team brings your vision to life.</p>
+            <h1>حلول رقمية مصممة خصيصًا لعملك</h1>
+            <p>في Nexa، نعمل على ابتكار حلول رقمية مخصصة لرفع مستوى عملك. سواء كان ذلك موقعًا إلكترونيًا سريع الاستجابة أو تطبيقًا للجوال أو برنامجًا مخصصًا، فإن فريقنا الموهوب يحول رؤيتك إلى واقع.</p>
             <div class="d-flex">
-              <a href="#about" class="btn-get-started">Get Started</a>
+              <a href="#about" class="btn-get-started">ابدأ</a>
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
@@ -325,11 +319,11 @@
     </section><!-- /Clients Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section">
+    <section id="about" class="about section" dir="rtl">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>About Us</h2>
+        <h2>حولنا</h2>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -338,21 +332,19 @@
 
           <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
             <p>
-              We are a team of skilled developers offering web, mobile app, desktop applications, and various
-              programming services. At Nexa, we transform ideas into successful digital products.
+              نحن فريق من المطورين المهرة الذين يقدمون خدمات الويب وتطبيقات الهاتف المحمول وتطبيقات سطح المكتب وخدمات البرمجة المتنوعة. في Nexa، نحول الأفكار إلى منتجات رقمية ناجحة.
             </p>
             <ul>
-              <li><i class="bi bi-check2-circle"></i> <span>Custom web development</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Mobile app creation</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Desktop application development</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Innovative programming solutions</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>تطوير الويب المخصص</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>إنشاء تطبيقات الهاتف المحمول</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>تطوير تطبيقات سطح المكتب</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>حلول البرمجة المبتكرة</span></li>
             </ul>
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <p>We prioritize quality and client satisfaction in every project. Leveraging the latest technologies, we
-              deliver efficient and scalable solutions. Our collaborative approach ensures your vision is realized.
-              Choose Nexa for excellence in digital innovation.</p>
+            <p>نحن نضع الجودة ورضا العملاء في الأولوية في كل مشروع. من خلال الاستفادة من أحدث التقنيات، نقدم حلولاً فعّالة وقابلة للتطوير. يضمن نهجنا التعاوني تحقيق رؤيتك.
+              اختر Nexa للتميز في الابتكار الرقمي.</p>
           </div>
 
         </div>
@@ -362,7 +354,7 @@
     </section><!-- /About Section -->
 
     <!-- Why Us Section -->
-    <section id="why-us" class="section why-us light-background" data-builder="section">
+    <section id="why-us" class="section why-us light-background" data-builder="section" dir="rtl">
 
       <div class="container-fluid">
 
@@ -371,7 +363,7 @@
           <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
 
             <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
-              <h3><strong>Why us?</strong></h3>
+              <h3><strong>لماذا نحن؟</strong></h3>
             </div>
             <br />
 
@@ -379,37 +371,33 @@
 
               <div class="faq-item faq-active">
 
-                <h3><span>01</span>Why should you trust Nexa with your digital projects?</h3>
+                <h3><span> 01 </span>لماذا يجب عليك أن تثق في Nexa فيما يتعلق بمشاريعك الرقمية؟</h3>
                 <div class="faq-content">
-                  <p>Our team of experienced developers delivers high-quality, customized solutions tailored to your
-                    specific needs.</p>
+                  <p>يقدم فريقنا من المطورين ذوي الخبرة حلولاً عالية الجودة ومخصصة مصممة خصيصًا لتلبية احتياجاتك المحددة.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
               <div class="faq-item">
-                <h3><span>02</span> What sets Nexa apart from other development teams?</h3>
+                <h3><span> 02 </span>ما الذي يميز Nexa عن فرق التطوير الأخرى؟</h3>
                 <div class="faq-content">
-                  <p>We combine innovation with precision, ensuring each project is efficient, scalable, and meets the
-                    latest industry standards.</p>
+                  <p>نحن نجمع بين الابتكار والدقة، لضمان كفاءة كل مشروع وقابليته للتطوير وتلبيته لأحدث معايير الصناعة.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
               <div class="faq-item">
-                <h3><span>03</span> How does Nexa ensure client satisfaction?</h3>
+                <h3><span> 03 </span>كيف تضمن شركة Nexa رضا العملاء؟</h3>
                 <div class="faq-content">
-                  <p>We prioritize open communication and collaboration, working closely with you to bring your vision
-                    to life.</p>
+                  <p>نحن نعطي الأولوية للتواصل المفتوح والتعاون، ونعمل معك بشكل وثيق لتحقيق رؤيتك.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
               <div class="faq-item">
-                <h3><span>04</span> Why is Nexa the right choice for your business?</h3>
+                <h3><span> 04 </span>لماذا يعد Nexa الخيار الصحيح لعملك؟</h3>
                 <div class="faq-content">
-                  <p> Our commitment to excellence and our diverse expertise in web, mobile, and desktop applications
-                    make us a reliable partner for your digital transformation.</p>
+                  <p>إن التزامنا بالتميز وخبرتنا المتنوعة في تطبيقات الويب والهواتف المحمولة وسطح المكتب يجعلنا شريكًا موثوقًا به لتحولك الرقمي.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -428,11 +416,11 @@
     </section><!-- /Why Us Section -->
 
     <!-- Services Section -->
-    <section id="services" class="services section light-background">
+    <section id="services" class="services section light-background" dir="rtl">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
+        <h2>الخدمات</h2>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div><!-- End Section Title -->
 
@@ -442,60 +430,48 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-globe icon"></i></div>
-              <h4><a class="stretched-link">Full Stack Website Development</a></h4>
-              <p>We create comprehensive web solutions, offering both front-end and back-end development. Our full stack
-                development services ensure your website is dynamic, responsive, and fully functional, tailored to meet
-                your business needs.</p>
+              <h4><a class="stretched-link">تطوير مواقع الويب الكاملة</a></h4>
+              <p>نحن نبتكر حلول ويب شاملة، ونقدم تطويرًا أماميًا وخلفيًا. تضمن خدمات التطوير الكاملة لدينا أن يكون موقع الويب الخاص بك ديناميكيًا وسريع الاستجابة وكامل الوظائف، ومصممًا لتلبية احتياجات عملك.</p>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-laptop icon"></i></div>
-              <h4><a class="stretched-link">Front-end Development</a></h4>
-              <p>Our team specializes in crafting visually stunning and user-friendly interfaces. We ensure your website
-                delivers an intuitive and seamless user experience, with responsive designs and interactive elements
-                that bring your vision to life.</p>
+              <h4><a class="stretched-link">تطوير الواجهة الأمامية</a></h4>
+              <p>يتخصص فريقنا في تصميم واجهات مذهلة بصريًا وسهلة الاستخدام. نحن نضمن أن يوفر موقعك الإلكتروني تجربة مستخدم بديهية وسلسة، مع تصميمات سريعة الاستجابة وعناصر تفاعلية تجعل رؤيتك حقيقة.</p>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-server icon"></i></div>
-              <h4><a class="stretched-link">Back-end Development</a></h4>
-              <p>We provide robust back-end development services to support your website's functionality and
-                scalability. Our expertise includes database management, server-side scripting, and API integration,
-                ensuring your website performs flawlessly.</p>
+              <h4><a class="stretched-link">تطوير الواجهة الخلفية</a></h4>
+              <p>نحن نقدم خدمات تطوير خلفية قوية لدعم وظائف موقعك على الويب وقابليته للتطوير. تشمل خبرتنا إدارة قواعد البيانات، وبرمجة البرامج النصية من جانب الخادم، وتكامل واجهة برمجة التطبيقات، مما يضمن أداء موقعك على الويب دون أي عيوب.</p>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-phone icon"></i></div>
-              <h4><a href="" class="stretched-link">Mobile App Development (Android & iOS)</a></h4>
-              <p>We develop high-quality mobile applications for both Android and iOS platforms. Our apps are
-                user-friendly, feature-rich, and designed to provide an excellent user experience, helping your business
-                reach customers on their preferred devices.</p>
+              <h4><a href="" class="stretched-link">تطوير تطبيقات الهاتف المحمول (Android و iOS)</a></h4>
+              <p>نقوم بتطوير تطبيقات جوال عالية الجودة لكل من منصتي Android وiOS. تطبيقاتنا سهلة الاستخدام وغنية بالميزات ومصممة لتوفير تجربة مستخدم ممتازة، مما يساعد عملك على الوصول إلى العملاء على أجهزتهم المفضلة.</p>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-cloud-upload icon"></i></div>
-              <h4><a class="stretched-link">Hosting and Deployment Services</a></h4>
-              <p>We offer reliable hosting services and assist in deploying your applications to major online stores
-                like Google Play and the Apple App Store. Our solutions ensure your website and apps are always
-                accessible, secure, and performing at their best.</p>
+              <h4><a class="stretched-link">خدمات الاستضافة والنشر</a></h4>
+              <p>نحن نقدم خدمات استضافة موثوقة ونساعد في نشر تطبيقاتك على المتاجر الإلكترونية الكبرى مثل Google Play ومتجر تطبيقات Apple. تضمن حلولنا أن يكون موقع الويب والتطبيقات لديك دائمًا في متناول اليد وآمنًا ويعمل بأفضل أداء.</p>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-tools icon"></i></div>
-              <h4><a class="stretched-link">Programming Problem-Solving Services</a></h4>
-              <p>Our expert developers provide dedicated support to solve programming issues efficiently. Whether you
-                need bug fixes, performance optimization, or new features, we tackle any challenge to ensure your
-                software runs smoothly.</p>
+              <h4><a class="stretched-link">خدمات حل مشاكل البرمجة</a></h4>
+              <p>يقدم مطورونا الخبراء دعمًا مخصصًا لحل مشكلات البرمجة بكفاءة. سواء كنت بحاجة إلى إصلاح الأخطاء أو تحسين الأداء أو ميزات جديدة، فإننا نتعامل مع أي تحدٍ لضمان تشغيل برنامجك بسلاسة.</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -506,11 +482,11 @@
     </section><!-- /Services Section -->
 
     <!-- Team Section -->
-    <section id="team" class="team section">
+    <section id="team" class="team section" >
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Team</h2>
+        <h2>فريق العمل</h2>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -520,12 +496,11 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member d-flex align-items-start">
               <div class="pic"><img src="assets/img/team/photo_2024-07-29_17-25-32.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Eng. Malik Madani</h4>
-                <span>Back End and Desktop Applications Developer
+              <div class="member-info" dir="rtl">
+                <h4>م. مالك مدني</h4>
+                <span>مطور تطبيقات سطح المكتب والواجهة الخلفية
                 </span>
-                <p>Expert in server-side development and desktop application creation, providing comprehensive solutions
-                  for both web backend and desktop software
+                <p>خبير في تطوير جانب الخادم وإنشاء تطبيقات سطح المكتب، وتوفير حلول شاملة لكل من برامج الويب الخلفية وبرامج سطح المكتب.
                 </p>
                 <div class="social">
                   <a href="https://www.facebook.com/malik.almdne?mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
@@ -540,11 +515,10 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="team-member d-flex align-items-start">
               <div class="pic"><img src="assets/img/team/ali.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Eng. Ali Zaitouny</h4>
-                <span>Back End Developer</span>
-                <p>Specializes in server-side development, focusing on database management, API integration, and server
-                  logic to ensure robust backend operations
+              <div class="member-info" dir="rtl">
+                <h4>م. علي زيتوني</h4>
+                <span>مطور الواجهة الخلفية</span>
+                <p>متخصص في تطوير جانب الخادم، مع التركيز على إدارة قواعد البيانات، وتكامل واجهة برمجة التطبيقات، ومنطق الخادم لضمان عمليات خلفية قوية.
                 </p>
                 <div class="social">
                   <a href="https://www.facebook.com/AliZaitouny?mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
@@ -559,11 +533,10 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member d-flex align-items-start">
               <div class="pic"><img src="assets/img/team/anas11.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Eng. Anas Kilani</h4>
-                <span>Full Stack Web Developer</span>
-                <p>Responsible for both front-end and back-end development, ensuring seamless integration and
-                  functionality across the entire web application
+              <div class="member-info" dir="rtl">
+                <h4>م. أنس كيلاني</h4>
+                <span>مطور ويب متكامل</span>
+                <p>المسؤول عن تطوير الواجهة الأمامية والخلفية، وضمان التكامل السلس والوظائف عبر تطبيق الويب بأكمله.
                 </p>
                 <div class="social">
                   <a href="https://www.facebook.com/anas.kilane.5?mibextid=LQQJ4d"><i class="bi bi-facebook"></i></a>
@@ -578,11 +551,10 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
             <div class="team-member d-flex align-items-start">
               <div class="pic"><img src="assets/img/team/adnan.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Eng. Adnan kefri</h4>
-                <span>Mobile Applications Developer</span>
-                <p>Develops cutting-edge mobile applications, delivering user-friendly and efficient solutions for
-                  various mobile platforms
+              <div class="member-info" dir="rtl">
+                <h4>م. عدنان الكفري</h4>
+                <span>مطور تطبيقات الهاتف المحمول</span>
+                <p>تطوير تطبيقات الهاتف المحمول المتطورة، وتقديم حلول سهلة الاستخدام وفعالة لمنصات الهاتف المحمول المختلفة.
                 </p>
                 <div class="social">
                   <a href="https://www.facebook.com/profile.php?id=100005010798916&mibextid=LQQJ4d"><i
@@ -603,13 +575,12 @@
 
 
     <!-- Faq 2 Section -->
-    <section id="faq-2" class="faq-2 section light-background">
+    <section id="faq-2" class="faq-2 section light-background" dir="rtl">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Frequently Asked Questions</h2>
-        <p>Welcome to our FAQ section! Here, we address some of the most common questions our clients have about our
-          services and processes. If you have any additional questions, feel free to contact us.
+        <h2>أسئلة مكررة</h2>
+        <p>مرحبًا بكم في قسم الأسئلة الشائعة لدينا! هنا، نتناول بعض الأسئلة الأكثر شيوعًا التي يطرحها عملاؤنا حول خدماتنا وعملياتنا. إذا كانت لديك أي أسئلة إضافية، فلا تتردد في الاتصال بنا.
         </p>
       </div><!-- End Section Title -->
 
@@ -623,10 +594,9 @@
 
               <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
                 <i class="faq-icon bi bi-question-circle"></i>
-                <h3>What are the steps involved in creating a website with Nexa?</h3>
+                <h3>ما هي الخطوات المتبعة لإنشاء موقع ويب مع Nexa؟</h3>
                 <div class="faq-content">
-                  <p>Creating a website with Nexa involves consultation, planning, design, development, testing,
-                    deployment, and ongoing maintenance.
+                  <p>يتضمن إنشاء موقع ويب باستخدام Nexa التشاور والتخطيط والتصميم والتطوير والاختبار والنشر والصيانة المستمرة.
                   </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -634,10 +604,9 @@
 
               <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
                 <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Why is it important to have a website for your business?</h3>
+                <h3>لماذا من المهم أن يكون لديك موقع ويب لشركتك؟</h3>
                 <div class="faq-content">
-                  <p>A website enhances online presence, showcases products, improves customer engagement, builds
-                    credibility, and supports online marketing efforts.
+                  <p>يعمل موقع الويب على تعزيز التواجد عبر الإنترنت، وعرض المنتجات، وتحسين مشاركة العملاء، وبناء المصداقية، ودعم جهود التسويق عبر الإنترنت.
                   </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -645,10 +614,9 @@
 
               <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
                 <i class="faq-icon bi bi-question-circle"></i>
-                <h3>How does Nexa ensure the security of my website?</h3>
+                <h3>كيف تضمن Nexa أمان موقع الويب الخاص بي؟</h3>
                 <div class="faq-content">
-                  <p>We ensure security through regular audits, secure coding, data encryption, firewalls, software
-                    updates, and secure hosting.
+                  <p>نحن نضمن الأمان من خلال عمليات التدقيق المنتظمة، والترميز الآمن، وتشفير البيانات، وجدران الحماية، وتحديثات البرامج، والاستضافة الآمنة.
                   </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -656,10 +624,9 @@
 
               <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
                 <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Can Nexa help with the SEO optimization of my website?</h3>
+                <h3>هل يمكن لـ Nexa المساعدة في تحسين محركات البحث لموقع الويب الخاص بي؟</h3>
                 <div class="faq-content">
-                  <p>Yes, we offer keyword research, on-page optimization, technical SEO, link building, and continuous
-                    monitoring to improve your search engine ranking.
+                  <p>نعم، نحن نقدم خدمات البحث عن الكلمات الرئيسية، وتحسين الصفحة، وتحسين محركات البحث الفنية، وبناء الروابط، والمراقبة المستمرة لتحسين ترتيب محرك البحث الخاص بك.
                   </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -667,11 +634,11 @@
 
               <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
                 <i class="faq-icon bi bi-question-circle"></i>
-                <h3>What technologies does Nexa use for web development?</h3>
+                <h3>ما هي التقنيات التي تستخدمها Nexa لتطوير الويب؟</h3>
                 <div class="faq-content">
-                  <p>We use modern technologies like Laravel, PHP, Node.js, Express.js, JavaScript, HTML, CSS,
-                    Bootstrap, Tailwind CSS, SQL, MySQL, SQL Server, MongoDB, Flutter, Dart, Swift, APIs, Git, GitHub,
-                    and provide deployment services on app stores and hosting platforms.
+                  <p>نحن نستخدم التقنيات الحديثة مثل Laravel، PHP، Node.js، Express.js، JavaScript، HTML، CSS،
+                    Bootstrap، Tailwind CSS، SQL، MySQL، SQL Server، MongoDB، Flutter، Dart، Swift، APIs، Git، GitHub،
+                    ونقدم خدمات النشر على متاجر التطبيقات ومنصات الاستضافة.
                   </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -691,27 +658,28 @@
     <section id="contact" class="contact section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>If you have any questions or need further assistance, please don't hesitate to contact us. We are here to
-          help!</p>
+        <h2>اتصال</h2>
+        <p>إذا كانت لديك أي أسئلة أو كنت بحاجة إلى مزيد من المساعدة، فلا تتردد في الاتصال بنا. نحن هنا لمساعدتك!</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
-          <div class="col-lg-5">
+          <div class="col-lg-5" dir="rtl">
             <div class="info-wrap">
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
+                &nbsp;
                 <div>
-                  <h3>Address</h3>
-                  <p>Syria, Hama, Shariaa, Sahet Alnajareen</p>
+                  <h3> عنوان </h3>
+                  <p>سوريا، حماة، الشريعة، ساحة النجارين</p>
                 </div>
               </div><!-- End Info Item -->
 
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
                 <i class="bi bi-telephone flex-shrink-0"></i>
+                &nbsp;
                 <div>
-                  <h3>Call Us</h3>
+                  <h3>اتصل بنا</h3>
                   <p>+963 964594375</p>
                   <p>+963 993329401</p>
                   <p>+963 993209002</p>
@@ -721,8 +689,9 @@
 
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
                 <i class="bi bi-envelope flex-shrink-0"></i>
+                &nbsp;
                 <div>
-                  <h3>Email Us</h3>
+                  <h3>ارسل لنا عبر البريد الإلكتروني</h3>
                   <p>support@devnexa.com</p>
                 </div>
               </div><!-- End Info Item -->
@@ -735,31 +704,31 @@
             </div>
           </div>
 
-          <div class="col-lg-7">
-            <form class="php-email-form" id="contact-form">
+          <div class="col-lg-7" dir="rtl">
+            <form class="php-email-form" id="contact-form" dir="rtl">
               <div class="row gy-4">
                 <div class="col-md-6">
-                  <label for="name" class="pb-2">Your Name</label>
+                  <label for="name" class="pb-2">اسمك</label>
                   <input type="text" name="name" id="name" class="form-control" required>
                 </div>
 
                 <div class="col-md-6">
-                  <label for="email" class="pb-2">Your Email</label>
+                  <label for="email" class="pb-2">بريدك الالكتروني</label>
                   <input type="email" class="form-control" name="email" id="email" required>
                 </div>
 
                 <div class="col-md-12">
-                  <label for="subject" class="pb-2">Subject</label>
+                  <label for="subject" class="pb-2">الموضوع</label>
                   <input type="text" class="form-control" name="subject" id="subject" required>
                 </div>
 
                 <div class="col-md-12">
-                  <label for="message" class="pb-2">Message</label>
+                  <label for="message" class="pb-2">الرسالة</label>
                   <textarea class="form-control" name="message" rows="10" id="message" required></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <button type="submit">Send Message</button>
+                  <button type="submit">ارسال الرسالة</button>
                 </div>
               </div>
             </form>
@@ -839,7 +808,7 @@
 
   </main>
 
-  <footer id="footer" class="footer">
+  <footer id="footer" class="footer" dir="rtl">
 
 
     <div class="container footer-top">
@@ -848,27 +817,24 @@
           <a href="index.html" class="d-flex align-items-center">
             <span class="sitename">Nexa</span>
           </a>
-          <div class="footer-contact pt-3">
-            <p>Syria, Hama
-            </p>
-            <p>Shariaa, Sahet Alnajareen</p>
-            <p>+963 964594375 | +963 993329401</p>
+          <div class="footer-contact pt-3" style="direction: rtl; text-align: right;">
+            <p>سوريا، حماه</p>
+            <p>الشريعة، ساحة النجارين</p>
+            <p >+963 964594375 | +963 993329401</p>
             <p>+963 993209002 | +963 952749458</p>
-            <p><strong>Email:</strong> <span>support@devnexa.com
-
-              </span></p>
-          </div>
+            <p><strong>البريد الالكتروني:</strong> <span>support@devnexa.com</span></p>
+          </div>          
         </div>
 
 
 
 
         <div class="col-lg-4 col-md-12">
-          <h4>Follow Us</h4>
-          <p>Stay connected and up-to-date with our latest news, updates, and more by following us on social media!
+          <h4>تابعنا</h4>
+          <p>ابق على تواصل واطلع على أحدث أخبارنا وتحديثاتنا والمزيد من خلال متابعتنا على وسائل التواصل الاجتماعي!
           </p>
           <div class="social-links d-flex">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
             <a href=""><i class="bi bi-facebook"></i></a>
             <a href=""><i class="bi bi-instagram"></i></a>
             <a href=""><i class="bi bi-linkedin"></i></a>
