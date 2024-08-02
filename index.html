@@ -55,7 +55,7 @@
   
       <div class="language-switcher">
         <div class="current-language" onclick="toggleDropdown()">
-          <span class="current-language-icon" id="current-lang-icon">Ar</span> <!-- أيقونة اللغة الحالية -->
+          <span class="current-language-icon btn-getstarted" id="current-lang-icon" style="color: #f0f0f0;">Ar</span> <!-- أيقونة اللغة الحالية -->
         </div>
         <ul class="languages-dropdown">
           <li class="language-item">
@@ -77,39 +77,6 @@
   </header>
   
   <style>
-    .navmenu ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-    }
-  
-    .navmenu ul li {
-      margin: 0 10px;
-    }
-  
-    .navmenu ul li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      padding: 5px 10px;
-      transition: color 0.3s;
-    }
-  
-    .navmenu ul li a:hover, .navmenu ul li a.active {
-      color: #007bff;
-    }
-  
-    .btn-getstarted {
-      background-color: #007bff;
-      color: #fff;
-      padding: 8px 15px;
-      border-radius: 4px;
-      text-decoration: none;
-      margin-left: 20px;
-    }
-  
     .language-switcher {
       position: relative;
       display: inline-block;
@@ -175,7 +142,7 @@
   <script>
     function setLanguage(language) {
       localStorage.setItem('preferredLanguage', language);
-      window.location.href = language === 'ar' ? 'en.html' : 'ar.html';
+      window.location.href = language === 'en' ? 'en.html' : 'index.html';
     }
   
     function toggleDropdown() {
@@ -186,13 +153,13 @@
     
   document.addEventListener('DOMContentLoaded', function () {
     const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
-    const isArabic = window.location.href.includes('en.html');
-    const isEnglish = window.location.href.includes('ar.html');
+    const isArabic = window.location.href.includes('index.html');
+    const isEnglish = window.location.href.includes('en.html');
     
     if (preferredLanguage === 'ar' && !isArabic) {
-      window.location.href = 'en.html';
+      window.location.href = 'index.html';
     } else if (preferredLanguage === 'en' && !isEnglish) {
-      window.location.href = 'ar.html';
+      window.location.href = 'en.html';
     }
   });
 
