@@ -8,6 +8,7 @@
   "use strict";
 
   document.addEventListener('DOMContentLoaded', () => {
+    
     // Apply .scrolled class to the body as the page is scrolled down
     function toggleScrolled() {
       const selectBody = document.querySelector('body');

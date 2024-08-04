@@ -262,11 +262,21 @@
 
       document.querySelector('.close-modal').addEventListener('click', function () {
         document.getElementById('navModal').style.display = 'none';
+        const element = document.querySelector('.mobile-nav-toggle');
+        if (element.classList.contains('bi-x')) {
+          element.classList.remove('bi-x');
+          element.classList.add('bi-list');
+        }
       });
 
       window.addEventListener('click', function (event) {
         if (event.target == document.getElementById('navModal')) {
           document.getElementById('navModal').style.display = 'none';
+          const element = document.querySelector('.mobile-nav-toggle');
+          if (element.classList.contains('bi-x')) {
+            element.classList.remove('bi-x');
+            element.classList.add('bi-list');
+          }
         }
       });
     });
