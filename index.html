@@ -10,13 +10,13 @@
 
   <!-- Favicons -->
   <link href="assets/img/n.logo.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/n.logo.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -26,63 +26,19 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <!-- jQuery from Google Hosted Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-</head>
-
-<body class="index-page">
-
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/nexa3.png" alt="Nexa Logo">
-        <!-- <h1 class="sitename">Nexa</h1> -->
-      </a>
-  
-      <nav id="navmenu" class="navmenu">
-        <ul class="d-flex align-items-center">
-          <li><a href="#hero" class="active">الصفحة الرئيسية</a></li>
-          <li><a href="#about">حولنا</a></li>
-          <li><a href="#services">الخدمات</a></li>
-          <li><a href="#team">فريق العمل</a></li>
-        </ul>
-      </nav>
-  
-      <a class="btn-getstarted" href="#about">ابدأ</a>
-  
-      <div class="language-switcher">
-        <div class="current-language" onclick="toggleDropdown()">
-          <span class="current-language-icon btn-getstarted" id="current-lang-icon" style="color: #f0f0f0;">Ar</span> <!-- أيقونة اللغة الحالية -->
-        </div>
-        <ul class="languages-dropdown">
-          <li class="language-item">
-            <a href="javascript:void(0);" class="language-link" title="English" onclick="setLanguage('en')">
-              <span class="language-icon">En</span> 
-            </a>
-          </li>
-          <li class="language-item">
-            <a href="javascript:void(0);" class="language-link" title="Arabic" onclick="setLanguage('ar')">
-              <span class="language-icon">Ar</span> 
-            </a>
-          </li>
-        </ul>
-      </div>
-  
-      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-  
-    </div>
-  </header>
-  
   <style>
     .language-switcher {
       position: relative;
       display: inline-block;
       margin-left: 20px;
     }
-  
+
     .current-language {
       cursor: pointer;
       display: flex;
@@ -90,14 +46,15 @@
       background-color: transparent;
       border: none;
       padding: 5px;
+      color: white;
     }
-  
+
     .languages-dropdown {
       display: none;
       position: absolute;
       top: 100%;
       left: 0;
-     
+      background-color: white;
       border-radius: 4px;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
       list-style-type: none;
@@ -106,72 +63,210 @@
       min-width: 100px;
       z-index: 1000;
     }
-  
+
+    .languages-dropdown.show {
+      display: block;
+    }
+
     .language-link {
-      display: flex;
-      align-items: center;
-      padding: 5px 10px;
+      display: block;
+      padding: 10px;
       text-decoration: none;
       color: #333;
     }
-  
+
     .language-link:hover {
       background-color: #f0f0f0;
     }
-  
-    .language-icon {
-      margin-right: 5px;
-    }
-  
-    .mobile-nav-toggle {
-      cursor: pointer;
-      display: none;
-    }
-  
-    @media (max-width: 992px) {
-      .navmenu, .btn-getstarted, .language-switcher {
+
+    @media (max-width: 1199px) {
+
+      .btn-getstarted,
+      .language-switcher {
         display: none;
       }
-  
+
       .mobile-nav-toggle {
         display: block;
       }
+
+      .navmenu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100%;
+        padding-top: 60px;
+        transition: right 0.3s ease;
+      }
+
+      .navmenu ul {
+        flex-direction: column;
+        padding: 0;
+      }
+
+      .navmenu ul li {
+        text-align: right;
+        padding: 10px;
+      }
+
+      .navmenu ul li a {
+        color: white;
+        padding: 10px 15px;
+        display: block;
+      }
+
+      .navmenu.show {
+        right: 0;
+      }
+
+      .close-nav {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+
+      .modal-content {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border: none;
+        width: 80%;
+        max-width: 300px;
+        height: 100%;
+        text-align: right;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+      }
+
+      .modal-content a {
+        display: block;
+        margin: 10px 0;
+        text-decoration: none;
+        color: #333;
+      }
+
+      .close-modal {
+        color: #aaa;
+        float: left;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close-modal:hover,
+      .close-modal:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .toggle-right {
+        margin-left: auto;
+      }
+
+      .bottom-links {
+        position: absolute;
+        bottom: 20px;
+        margin: 20px;
+        width: 80%;
+        font-size: smaller;
+      }
+
     }
   </style>
-  
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="me-auto">
+        <img src="assets/img/nexa3.svg" alt="Nexa Logo"  width="100px">
+      </a>
+
+      <i class="mobile-nav-toggle d-xl-none bi bi-list d-flex toggle-right"></i>
+
+      <nav id="navmenu" class="navmenu">
+        <ul class="d-flex align-items-center">
+          <li><a href="#hero" class="active">الصفحة الرئيسية</a></li>
+          <li><a href="#about">حولنا</a></li>
+          <li><a href="#services">الخدمات</a></li>
+          <li><a href="#team">فريق العمل</a></li>
+        </ul>
+      </nav>
+
+      <div class="language-switcher">
+        <button class="current-language">اللغة</button>
+        <ul class="languages-dropdown">
+          <li><a href="/" class="language-link">العربية</a></li>
+          <li><a href="/en" class="language-link">English</a></li>
+        </ul>
+      </div>
+
+      <a class="btn-getstarted" href="#about">ابدأ</a>
+
+    </div>
+  </header>
+
+  <div id="navModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">×</span>
+      <a href="#hero">الصفحة الرئيسية</a>
+      <a href="#about">حولنا</a>
+      <a href="#services">الخدمات</a>
+      <a href="#team">فريق العمل</a>
+      <div class="bottom-links">
+        <hr />
+        <a href="/" class="language-link">العربية</a>
+        <a href="/en" class="language-link">English</a>
+      </div>
+    </div>
+  </div>
+
+
   <script>
-    function setLanguage(language) {
-      localStorage.setItem('preferredLanguage', language);
-      window.location.href = language === 'en' ? 'en.html' : 'index.html';
-    }
-  
-    function toggleDropdown() {
-      var dropdown = document.querySelector('.languages-dropdown');
-      dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
-    }
-  
-    
-  document.addEventListener('DOMContentLoaded', function () {
-    const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
-    const isArabic = window.location.href.includes('index.html');
-    const isEnglish = window.location.href.includes('en.html');
-    
-    if (preferredLanguage === 'ar' && !isArabic) {
-      window.location.href = 'index.html';
-    } else if (preferredLanguage === 'en' && !isEnglish) {
-      window.location.href = 'en.html';
-    }
-  });
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelector('.current-language').addEventListener('click', function () {
+        document.querySelector('.languages-dropdown').classList.toggle('show');
+      });
 
+      document.querySelector('.mobile-nav-toggle').addEventListener('click', function () {
+        document.getElementById('navModal').style.display = 'flex';
+      });
 
-  
-    document.addEventListener('click', function(event) {
-      var isClickInside = document.querySelector('.language-switcher').contains(event.target);
-      if (!isClickInside) {
-        document.querySelector('.languages-dropdown').style.display = 'none';
-      }
+      document.querySelector('.close-modal').addEventListener('click', function () {
+        document.getElementById('navModal').style.display = 'none';
+      });
+
+      window.addEventListener('click', function (event) {
+        if (event.target == document.getElementById('navModal')) {
+          document.getElementById('navModal').style.display = 'none';
+        }
+      });
     });
-  </script>  
+  </script>
+
 
   <main class="main">
 
@@ -182,7 +277,8 @@
         <div class="row gy-4">
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
             <h1>حلول رقمية مصممة خصيصًا لعملك</h1>
-            <p>في Nexa، نعمل على ابتكار حلول رقمية مخصصة لرفع مستوى عملك. سواء كان ذلك موقعًا إلكترونيًا سريع الاستجابة أو تطبيقًا للجوال أو برنامجًا مخصصًا، فإن فريقنا الموهوب يحول رؤيتك إلى واقع.</p>
+            <p>في Nexa، نعمل على ابتكار حلول رقمية مخصصة لرفع مستوى عملك. سواء كان ذلك موقعًا إلكترونيًا سريع الاستجابة
+              أو تطبيقًا للجوال أو برنامجًا مخصصًا، فإن فريقنا الموهوب يحول رؤيتك إلى واقع.</p>
             <div class="d-flex">
               <a href="#about" class="btn-get-started">ابدأ</a>
             </div>
@@ -299,7 +395,8 @@
 
           <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
             <p>
-              نحن فريق من المطورين المهرة الذين يقدمون خدمات الويب وتطبيقات الهاتف المحمول وتطبيقات سطح المكتب وخدمات البرمجة المتنوعة. في Nexa، نحول الأفكار إلى منتجات رقمية ناجحة.
+              نحن فريق من المطورين المهرة الذين يقدمون خدمات الويب وتطبيقات الهاتف المحمول وتطبيقات سطح المكتب وخدمات
+              البرمجة المتنوعة. في Nexa، نحول الأفكار إلى منتجات رقمية ناجحة.
             </p>
             <ul>
               <li><i class="bi bi-check2-circle"></i> <span>تطوير الويب المخصص</span></li>
@@ -310,7 +407,8 @@
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <p>نحن نضع الجودة ورضا العملاء في الأولوية في كل مشروع. من خلال الاستفادة من أحدث التقنيات، نقدم حلولاً فعّالة وقابلة للتطوير. يضمن نهجنا التعاوني تحقيق رؤيتك.
+            <p>نحن نضع الجودة ورضا العملاء في الأولوية في كل مشروع. من خلال الاستفادة من أحدث التقنيات، نقدم حلولاً
+              فعّالة وقابلة للتطوير. يضمن نهجنا التعاوني تحقيق رؤيتك.
               اختر Nexa للتميز في الابتكار الرقمي.</p>
           </div>
 
@@ -340,7 +438,8 @@
 
                 <h3><span> 01 </span>لماذا يجب عليك أن تثق في Nexa فيما يتعلق بمشاريعك الرقمية؟</h3>
                 <div class="faq-content">
-                  <p>يقدم فريقنا من المطورين ذوي الخبرة حلولاً عالية الجودة ومخصصة مصممة خصيصًا لتلبية احتياجاتك المحددة.</p>
+                  <p>يقدم فريقنا من المطورين ذوي الخبرة حلولاً عالية الجودة ومخصصة مصممة خصيصًا لتلبية احتياجاتك
+                    المحددة.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -348,7 +447,8 @@
               <div class="faq-item">
                 <h3><span> 02 </span>ما الذي يميز Nexa عن فرق التطوير الأخرى؟</h3>
                 <div class="faq-content">
-                  <p>نحن نجمع بين الابتكار والدقة، لضمان كفاءة كل مشروع وقابليته للتطوير وتلبيته لأحدث معايير الصناعة.</p>
+                  <p>نحن نجمع بين الابتكار والدقة، لضمان كفاءة كل مشروع وقابليته للتطوير وتلبيته لأحدث معايير الصناعة.
+                  </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -364,7 +464,8 @@
               <div class="faq-item">
                 <h3><span> 04 </span>لماذا يعد Nexa الخيار الصحيح لعملك؟</h3>
                 <div class="faq-content">
-                  <p>إن التزامنا بالتميز وخبرتنا المتنوعة في تطبيقات الويب والهواتف المحمولة وسطح المكتب يجعلنا شريكًا موثوقًا به لتحولك الرقمي.</p>
+                  <p>إن التزامنا بالتميز وخبرتنا المتنوعة في تطبيقات الويب والهواتف المحمولة وسطح المكتب يجعلنا شريكًا
+                    موثوقًا به لتحولك الرقمي.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -388,7 +489,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>الخدمات</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>خدماتنا تشمل تقديم حلول مبتكرة لتلبية احتياجات عملائنا المتنوعة</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -398,7 +499,8 @@
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-globe icon"></i></div>
               <h4><a class="stretched-link">تطوير مواقع الويب الكاملة</a></h4>
-              <p>نحن نبتكر حلول ويب شاملة، ونقدم تطويرًا أماميًا وخلفيًا. تضمن خدمات التطوير الكاملة لدينا أن يكون موقع الويب الخاص بك ديناميكيًا وسريع الاستجابة وكامل الوظائف، ومصممًا لتلبية احتياجات عملك.</p>
+              <p>نحن نبتكر حلول ويب شاملة، ونقدم تطويرًا أماميًا وخلفيًا. تضمن خدمات التطوير الكاملة لدينا أن يكون موقع
+                الويب الخاص بك ديناميكيًا وسريع الاستجابة وكامل الوظائف، ومصممًا لتلبية احتياجات عملك.</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -406,7 +508,8 @@
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-laptop icon"></i></div>
               <h4><a class="stretched-link">تطوير الواجهة الأمامية</a></h4>
-              <p>يتخصص فريقنا في تصميم واجهات مذهلة بصريًا وسهلة الاستخدام. نحن نضمن أن يوفر موقعك الإلكتروني تجربة مستخدم بديهية وسلسة، مع تصميمات سريعة الاستجابة وعناصر تفاعلية تجعل رؤيتك حقيقة.</p>
+              <p>يتخصص فريقنا في تصميم واجهات مذهلة بصريًا وسهلة الاستخدام. نحن نضمن أن يوفر موقعك الإلكتروني تجربة
+                مستخدم بديهية وسلسة، مع تصميمات سريعة الاستجابة وعناصر تفاعلية تجعل رؤيتك حقيقة.</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -414,7 +517,9 @@
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-server icon"></i></div>
               <h4><a class="stretched-link">تطوير الواجهة الخلفية</a></h4>
-              <p>نحن نقدم خدمات تطوير خلفية قوية لدعم وظائف موقعك على الويب وقابليته للتطوير. تشمل خبرتنا إدارة قواعد البيانات، وبرمجة البرامج النصية من جانب الخادم، وتكامل واجهة برمجة التطبيقات، مما يضمن أداء موقعك على الويب دون أي عيوب.</p>
+              <p>نحن نقدم خدمات تطوير خلفية قوية لدعم وظائف موقعك على الويب وقابليته للتطوير. تشمل خبرتنا إدارة قواعد
+                البيانات، وبرمجة البرامج النصية من جانب الخادم، وتكامل واجهة برمجة التطبيقات، مما يضمن أداء موقعك على
+                الويب دون أي عيوب.</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -422,7 +527,9 @@
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-phone icon"></i></div>
               <h4><a href="" class="stretched-link">تطوير تطبيقات الهاتف المحمول (Android و iOS)</a></h4>
-              <p>نقوم بتطوير تطبيقات جوال عالية الجودة لكل من منصتي Android وiOS. تطبيقاتنا سهلة الاستخدام وغنية بالميزات ومصممة لتوفير تجربة مستخدم ممتازة، مما يساعد عملك على الوصول إلى العملاء على أجهزتهم المفضلة.</p>
+              <p>نقوم بتطوير تطبيقات جوال عالية الجودة لكل من منصتي Android وiOS. تطبيقاتنا سهلة الاستخدام وغنية
+                بالميزات ومصممة لتوفير تجربة مستخدم ممتازة، مما يساعد عملك على الوصول إلى العملاء على أجهزتهم المفضلة.
+              </p>
             </div>
           </div><!-- End Service Item -->
 
@@ -430,7 +537,9 @@
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-cloud-upload icon"></i></div>
               <h4><a class="stretched-link">خدمات الاستضافة والنشر</a></h4>
-              <p>نحن نقدم خدمات استضافة موثوقة ونساعد في نشر تطبيقاتك على المتاجر الإلكترونية الكبرى مثل Google Play ومتجر تطبيقات Apple. تضمن حلولنا أن يكون موقع الويب والتطبيقات لديك دائمًا في متناول اليد وآمنًا ويعمل بأفضل أداء.</p>
+              <p>نحن نقدم خدمات استضافة موثوقة ونساعد في نشر تطبيقاتك على المتاجر الإلكترونية الكبرى مثل Google Play
+                ومتجر تطبيقات Apple. تضمن حلولنا أن يكون موقع الويب والتطبيقات لديك دائمًا في متناول اليد وآمنًا ويعمل
+                بأفضل أداء.</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -438,7 +547,8 @@
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-tools icon"></i></div>
               <h4><a class="stretched-link">خدمات حل مشاكل البرمجة</a></h4>
-              <p>يقدم مطورونا الخبراء دعمًا مخصصًا لحل مشكلات البرمجة بكفاءة. سواء كنت بحاجة إلى إصلاح الأخطاء أو تحسين الأداء أو ميزات جديدة، فإننا نتعامل مع أي تحدٍ لضمان تشغيل برنامجك بسلاسة.</p>
+              <p>يقدم مطورونا الخبراء دعمًا مخصصًا لحل مشكلات البرمجة بكفاءة. سواء كنت بحاجة إلى إصلاح الأخطاء أو تحسين
+                الأداء أو ميزات جديدة، فإننا نتعامل مع أي تحدٍ لضمان تشغيل برنامجك بسلاسة.</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -449,7 +559,7 @@
     </section><!-- /Services Section -->
 
     <!-- Team Section -->
-    <section id="team" class="team section" >
+    <section id="team" class="team section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -467,29 +577,12 @@
                 <h4>م. مالك مدني</h4>
                 <span>مطور تطبيقات سطح المكتب والواجهة الخلفية
                 </span>
-                <p>خبير في تطوير جانب الخادم وإنشاء تطبيقات سطح المكتب، وتوفير حلول شاملة لكل من برامج الويب الخلفية وبرامج سطح المكتب.
+                <p>خبير في تطوير جانب الخادم وإنشاء تطبيقات سطح المكتب، وتوفير حلول شاملة لكل من برامج الويب الخلفية
+                  وبرامج سطح المكتب.
                 </p>
                 <div class="social">
                   <a href="https://www.facebook.com/malik.almdne?mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
                   <a href="https://www.instagram.com/malik_madani?igsh=ZGUzMzM3NWJiOQ=="><i
-                      class="bi bi-instagram"></i></a>
-                  <a> <i class="bi bi-linkedin"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/ali.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info" dir="rtl">
-                <h4>م. علي زيتوني</h4>
-                <span>مطور الواجهة الخلفية</span>
-                <p>متخصص في تطوير جانب الخادم، مع التركيز على إدارة قواعد البيانات، وتكامل واجهة برمجة التطبيقات، ومنطق الخادم لضمان عمليات خلفية قوية.
-                </p>
-                <div class="social">
-                  <a href="https://www.facebook.com/AliZaitouny?mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
-                  <a href="https://www.instagram.com/al_zaitouny?igsh=NTc4MTIwNjQ2YQ=="><i
                       class="bi bi-instagram"></i></a>
                   <a> <i class="bi bi-linkedin"></i> </a>
                 </div>
@@ -515,13 +608,33 @@
             </div>
           </div>
 
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/ali.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info" dir="rtl">
+                <h4>م. علي زيتوني</h4>
+                <span>مطور الواجهة الخلفية</span>
+                <p>متخصص في تطوير جانب الخادم، مع التركيز على إدارة قواعد البيانات، وتكامل واجهة برمجة التطبيقات، ومنطق
+                  الخادم لضمان عمليات خلفية قوية.
+                </p>
+                <div class="social">
+                  <a href="https://www.facebook.com/AliZaitouny?mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/al_zaitouny?igsh=NTc4MTIwNjQ2YQ=="><i
+                      class="bi bi-instagram"></i></a>
+                  <a> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
             <div class="team-member d-flex align-items-start">
               <div class="pic"><img src="assets/img/team/adnan.jpg" class="img-fluid" alt=""></div>
               <div class="member-info" dir="rtl">
                 <h4>م. عدنان الكفري</h4>
                 <span>مطور تطبيقات الهاتف المحمول</span>
-                <p>تطوير تطبيقات الهاتف المحمول المتطورة، وتقديم حلول سهلة الاستخدام وفعالة لمنصات الهاتف المحمول المختلفة.
+                <p>تطوير تطبيقات الهاتف المحمول المتطورة، وتقديم حلول سهلة الاستخدام وفعالة لمنصات الهاتف المحمول
+                  المختلفة.
                 </p>
                 <div class="social">
                   <a href="https://www.facebook.com/profile.php?id=100005010798916&mibextid=LQQJ4d"><i
@@ -547,7 +660,8 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>أسئلة مكررة</h2>
-        <p>مرحبًا بكم في قسم الأسئلة الشائعة لدينا! هنا، نتناول بعض الأسئلة الأكثر شيوعًا التي يطرحها عملاؤنا حول خدماتنا وعملياتنا. إذا كانت لديك أي أسئلة إضافية، فلا تتردد في الاتصال بنا.
+        <p>مرحبًا بكم في قسم الأسئلة الشائعة لدينا! هنا، نتناول بعض الأسئلة الأكثر شيوعًا التي يطرحها عملاؤنا حول
+          خدماتنا وعملياتنا. إذا كانت لديك أي أسئلة إضافية، فلا تتردد في الاتصال بنا.
         </p>
       </div><!-- End Section Title -->
 
@@ -563,7 +677,8 @@
                 <i class="faq-icon bi bi-question-circle"></i>
                 <h3>ما هي الخطوات المتبعة لإنشاء موقع ويب مع Nexa؟</h3>
                 <div class="faq-content">
-                  <p>يتضمن إنشاء موقع ويب باستخدام Nexa التشاور والتخطيط والتصميم والتطوير والاختبار والنشر والصيانة المستمرة.
+                  <p>يتضمن إنشاء موقع ويب باستخدام Nexa التشاور والتخطيط والتصميم والتطوير والاختبار والنشر والصيانة
+                    المستمرة.
                   </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -573,7 +688,8 @@
                 <i class="faq-icon bi bi-question-circle"></i>
                 <h3>لماذا من المهم أن يكون لديك موقع ويب لشركتك؟</h3>
                 <div class="faq-content">
-                  <p>يعمل موقع الويب على تعزيز التواجد عبر الإنترنت، وعرض المنتجات، وتحسين مشاركة العملاء، وبناء المصداقية، ودعم جهود التسويق عبر الإنترنت.
+                  <p>يعمل موقع الويب على تعزيز التواجد عبر الإنترنت، وعرض المنتجات، وتحسين مشاركة العملاء، وبناء
+                    المصداقية، ودعم جهود التسويق عبر الإنترنت.
                   </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -583,7 +699,8 @@
                 <i class="faq-icon bi bi-question-circle"></i>
                 <h3>كيف تضمن Nexa أمان موقع الويب الخاص بي؟</h3>
                 <div class="faq-content">
-                  <p>نحن نضمن الأمان من خلال عمليات التدقيق المنتظمة، والترميز الآمن، وتشفير البيانات، وجدران الحماية، وتحديثات البرامج، والاستضافة الآمنة.
+                  <p>نحن نضمن الأمان من خلال عمليات التدقيق المنتظمة، والترميز الآمن، وتشفير البيانات، وجدران الحماية،
+                    وتحديثات البرامج، والاستضافة الآمنة.
                   </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -593,7 +710,8 @@
                 <i class="faq-icon bi bi-question-circle"></i>
                 <h3>هل يمكن لـ Nexa المساعدة في تحسين محركات البحث لموقع الويب الخاص بي؟</h3>
                 <div class="faq-content">
-                  <p>نعم، نحن نقدم خدمات البحث عن الكلمات الرئيسية، وتحسين الصفحة، وتحسين محركات البحث الفنية، وبناء الروابط، والمراقبة المستمرة لتحسين ترتيب محرك البحث الخاص بك.
+                  <p>نعم، نحن نقدم خدمات البحث عن الكلمات الرئيسية، وتحسين الصفحة، وتحسين محركات البحث الفنية، وبناء
+                    الروابط، والمراقبة المستمرة لتحسين ترتيب محرك البحث الخاص بك.
                   </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -776,8 +894,6 @@
   </main>
 
   <footer id="footer" class="footer" dir="rtl">
-
-
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
@@ -787,14 +903,11 @@
           <div class="footer-contact pt-3" style="direction: rtl; text-align: right;">
             <p>سوريا، حماه</p>
             <p>الشريعة، ساحة النجارين</p>
-            <p >+963 964594375 | +963 993329401</p>
+            <p>+963 964594375 | +963 993329401</p>
             <p>+963 993209002 | +963 952749458</p>
             <p><strong>البريد الالكتروني:</strong> <span>support@devnexa.com</span></p>
-          </div>          
+          </div>
         </div>
-
-
-
 
         <div class="col-lg-4 col-md-12">
           <h4>تابعنا</h4>
@@ -810,9 +923,6 @@
 
       </div>
     </div>
-
-
-
   </footer>
 
   <!-- Scroll Top -->
@@ -828,9 +938,8 @@
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/jquery.counterup.min.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
